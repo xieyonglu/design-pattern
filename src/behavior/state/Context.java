@@ -15,10 +15,10 @@ public class Context {
 	public void execute() {
 		if("start".equals(state.getValue())) {
 			System.out.println("==start==");
-		} else if("process".equals(state.getValue())) {
-			System.out.println("==process==");
+			this.state.method1();
 		} else if("end".equals(state.getValue())) {
 			System.out.println("==end==");
+			this.state.method2();
 		}
 	}
 	

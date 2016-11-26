@@ -3,17 +3,18 @@ package behavior.memento;
 public class Client {
 
 	public static void main(String[] args) {
-		Context context = new Context();
-		context.setValue("egg");
+		Original original = new Original();
+		original.setValue("egg");
 		
-		Memento memento = new Memento();
-		context.setMemento(memento);
+		Storage storage = new Storage(original.create());
 		
-		System.out.println(context.getValue());
-		context.setValue("apple");
-		System.out.println(context.getValue());
-		context.restore();
-		System.out.println(context.getValue());
+		System.out.println(original.getValue());
+		
+		original.setValue("apple");
+		System.out.println(original.getValue());
+		
+		original.restore(storage.getMemento());
+		System.out.println(original.getValue());
 	}
 
 }

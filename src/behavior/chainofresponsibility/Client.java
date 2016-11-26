@@ -3,9 +3,9 @@ package behavior.chainofresponsibility;
 public class Client {
 
 	public static void main(String[] args) {
-		AbstractHandler aHandler = new Handler();
-		AbstractHandler bHandler = new Handler();
-		AbstractHandler cHandler = new Handler();
+		Handler aHandler = new Handler("A");
+		Handler bHandler = new Handler("B");
+		Handler cHandler = new Handler("C");
 		
 		aHandler.setHandler(bHandler);
 		bHandler.setHandler(cHandler);

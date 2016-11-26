@@ -12,10 +12,6 @@ public class Client {
 		context.execute();
 		
 		//
-		state.setValue("process");
-		context.execute();
-		
-		//
 		state.setValue("end");
 		context.execute();
 	}

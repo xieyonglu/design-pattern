@@ -8,6 +8,14 @@ public abstract class AbstractSenderBridge {
 		this.sender = sender;
 	}
 	
+	public ISender getSender() {
+		return sender;
+	}
+
+	public void setSender(ISender sender) {
+		this.sender = sender;
+	}
+
 	public void send() {
 		sender.send();
 	}

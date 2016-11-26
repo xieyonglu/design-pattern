@@ -12,4 +12,12 @@ public class State {
 		this.value = value;
 	}
 	
+	public void method1() {
+		System.out.println("==State method1==");
+	}
+	
+	public void method2() {
+		System.out.println("==State method2==");
+	}
+	
 }
