@@ -7,10 +7,18 @@ public class Original {
 	public Original() {
 	}
 	
+	/**
+	 * 创建备忘录
+	 * @return
+	 */
 	public Memento create() {
 		return new Memento(this.getValue());
 	}
 	
+	/**
+	 * 恢复备忘录
+	 * @param memento
+	 */
 	public void restore(Memento memento) {
 		this.value = memento.getValue();
 	}

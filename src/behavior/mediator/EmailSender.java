@@ -8,6 +8,10 @@ public class EmailSender implements ISender {
 		this.mediator = mediator;
 	}
 
+	public Mediator getMediator() {
+		return mediator;
+	}
+
 	@Override
 	public void send() {
 		System.out.println("==EmailSender send==");

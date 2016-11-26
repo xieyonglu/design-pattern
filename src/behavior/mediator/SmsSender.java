@@ -7,6 +7,10 @@ public class SmsSender implements ISender {
 	public SmsSender(Mediator mediator) {
 		this.mediator = mediator;
 	}
+	
+	public Mediator getMediator() {
+		return mediator;
+	}
 
 	@Override
 	public void send() {
