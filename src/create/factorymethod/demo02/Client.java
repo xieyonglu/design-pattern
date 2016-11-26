@@ -1,6 +1,6 @@
 package create.factorymethod.demo02;
 
-public class FactoryMethodTest {
+public class Client {
 
 	public static void main(String[] args) {
 		ISender smsSender = SenderFactory.producerSmsSender();
