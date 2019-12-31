@@ -1,7 +1,8 @@
 package create.singleton.demo03;
 
 /**
- * <h1>单例模式 - 懒汉模式的衍生型</h1>
+ * <h1>单例模式 - 懒汉模式的衍生型（双重加锁）</h1>
+ * 
  * @author yonglu.xie
  *
  */
@@ -16,7 +17,7 @@ public class Singleton {
 		if (singleton == null) {
 			synchronized (singleton) {
 				if (singleton == null) {
-					return new Singleton();
+					singleton = new Singleton();
 				}
 			}
 		}
